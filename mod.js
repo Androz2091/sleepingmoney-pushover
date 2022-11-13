@@ -1,19 +1,9 @@
-import {
-    createDatastore
-} from 'https://git.kaki87.net/KaKi87/xedb/raw/branch/master/mod.js';
+import "https://deno.land/x/dotenv/load.ts";
+
+import { createDatastore } from 'https://git.kaki87.net/KaKi87/xedb/raw/branch/master/mod.js';
 import deno from 'https://git.kaki87.net/KaKi87/xedb/raw/branch/master/lib/deno.js';
 
 import PQueue from "https://deno.land/x/p_queue@1.0.1/mod.ts";
-
-const queue = new PQueue({
-    concurrency: 1,
-    intervalCap: 1,
-    interval: 1000
-});
-
-import "https://deno.land/x/dotenv/load.ts";
-
-import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 
 const datastore = createDatastore({
     runtime: deno,
@@ -21,13 +11,19 @@ const datastore = createDatastore({
 });
 datastore.load();
 
-const url = 'https://annonces.sleepingmoney.com';
+const queue = new PQueue({
+    concurrency: 1,
+    intervalCap: 1,
+    interval: 1000
+});
 
 /**
  * Fetches the items from Sleeping Money and returns an array of cleaned items
  * @returns {Promise<ItemData[]>}
  */
 const fetchItems = async () => {
+
+    const url = 'https://annonces.sleepingmoney.com';
 
     console.log(`[${new Date().toLocaleString()}] Fetching items...`);
 
