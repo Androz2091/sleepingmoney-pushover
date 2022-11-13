@@ -1,5 +1,7 @@
 import "https://deno.land/x/dotenv/load.ts";
 
+import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
+
 import { createDatastore } from 'https://git.kaki87.net/KaKi87/xedb/raw/branch/master/mod.js';
 import deno from 'https://git.kaki87.net/KaKi87/xedb/raw/branch/master/lib/deno.js';
 
