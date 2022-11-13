@@ -1,6 +1,6 @@
 # SleepingMoney Pushover
 
-*almost* realtime notifications from https://sleepingmoney.com using Pushover 🌩️
+*almost* realtime notifications from https://www.sleepingmoney.com using Pushover 🌩️
 
 ## Demo
 
