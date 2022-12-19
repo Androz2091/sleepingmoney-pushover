@@ -2,8 +2,8 @@ import "https://deno.land/x/dotenv/load.ts";
 
 import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 
-import { createDatastore } from 'https://git.kaki87.net/KaKi87/xedb/raw/branch/master/mod.js';
-import deno from 'https://git.kaki87.net/KaKi87/xedb/raw/branch/master/lib/deno.js';
+import { createDatastore } from 'https://git.kaki87.net/KaKi87/xedb/raw/commit/913a894ef5e4e96bc885e57f8e9bb4d5fc97bf6f/mod.js';
+import deno from 'https://git.kaki87.net/KaKi87/xedb/raw/commit/913a894ef5e4e96bc885e57f8e9bb4d5fc97bf6f/lib/deno.js';
 
 import PQueue from "https://deno.land/x/p_queue@1.0.1/mod.ts";
 
